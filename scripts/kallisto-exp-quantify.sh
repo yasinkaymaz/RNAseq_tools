@@ -15,6 +15,26 @@ Organism=$6
 #optional EBV type. Required only when EBV is used. Either 1 or 2.
 type=$7
 
+#EBV genome type
+if [ "$type" = "1" ]
+then
+echo "Genome is Type I"
+Type='type1'
+EBVgenome="NC_007605"
+VfatDIR="$toolDir/resources/Vfat"
+RefDIR="$toolDir/resources/Annotation/Type1/Vfat/EBV"
+AnnotationDir="$toolDir/resources/Annotation/Type1/"
+EBVINDEX="$toolDir/'resources/EBV/kallisto/Type1/EBV_transcripts"
+else
+echo "Genome is Type II"
+Type='type2'
+EBVgenome="NC_009334"
+VfatDIR="$toolDir/resources/Vfat/Type2"
+RefDIR="$toolDir/resources/Annotation/Type2/Vfat/EBV"
+AnnotationDir="$toolDir/resources/Annotation/Type2/"
+EBVINDEX="$toolDir/resources/EBV/kallisto/Type2/EBV_transcripts"
+fi
+
 
 if [ -z "$Fastq2" ] ; then
   Pairness='--single -l 200 -s 20'
@@ -26,11 +46,12 @@ if [ Organism == "human" ];
 then
   index_file=''
 else
-  index_file=$toolDir/'resources/EBV/kallisto/'$EBVtype'/EBV_transcripts'
+  index_file=$EBVINDEX
 fi
 
 kallisto quant -i $index_file \
 -o kallisto."$SAMPLE_NAME" \
+--rf-stranded \
 $Pairness \
 -t $nt \
 --bias \
