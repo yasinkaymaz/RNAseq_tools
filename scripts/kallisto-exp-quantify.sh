@@ -24,7 +24,7 @@ EBVgenome="NC_007605"
 VfatDIR="$toolDir/resources/Vfat"
 RefDIR="$toolDir/resources/Annotation/Type1/Vfat/EBV"
 AnnotationDir="$toolDir/resources/Annotation/Type1/"
-EBVINDEX="$toolDir/'resources/EBV/kallisto/Type1/EBV_transcripts"
+EBVINDEX="$toolDir/resources/EBV/kallisto/Type1/EBV_transcripts"
 else
 echo "Genome is Type II"
 Type='type2'
