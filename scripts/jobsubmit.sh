@@ -31,9 +31,9 @@ do
     ~/codes/RNAseq_tools/scripts/kallisto-exp-quantify.sh \
     "$SAMPLE_NAME"_"$type"_PolyA-RNA_EBV stranded 4 \
     ~/project/yk42w/data/RNAseq/eBLSamples/PolyA/$SAMPLE_NAME/eBLRNAseqBatch3_"$SAMPLE_NAME"_R1.fastq.gz \
-    ~/project/yk42w/data/RNAseq/eBLSamples/PolyA/$SAMPLE_NAME/eBLRNAseqBatch3_"$SAMPLE_NAME"_R2.fastq.gz EBV $type;  
+    ~/project/yk42w/data/RNAseq/eBLSamples/PolyA/$SAMPLE_NAME/eBLRNAseqBatch3_"$SAMPLE_NAME"_R2.fastq.gz EBV $type;
 
-    sleep 1; \
+    sleep 1;
   done
 done
 
