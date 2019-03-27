@@ -1,0 +1,44 @@
+{
+	"__default__":
+	{
+		"time" : "0-04:00",
+		"n" : 4,
+		"queue" : "general",
+		"memory" : 12000
+	},
+	"download_fastqs":
+	{
+		"time" : "0-06:00",
+		"n" : 4,
+		"queue" : "general",
+		"memory" : 12000
+	},
+	"kallisto_index":
+	{
+		"time" : "0-03:00",
+		"n" : 4,
+		"queue" : "general",
+		"memory" : 12000
+	},
+	"kallisto_quant_sample":
+	{
+		"time" : "0-12:00",
+		"n" : 12,
+		"queue" : "general",
+		"memory" : 24000
+	},
+	"rsem_index":
+	{
+		"time" : "0-03:00",
+		"n" : 4,
+		"queue" : "general",
+		"memory" : 12000
+	},
+	"rsem_quant_sample":
+	{
+		"time" : "0-06:00",
+		"n" : 2,
+		"queue" : "general",
+		"memory" : 24000
+	}
+}
